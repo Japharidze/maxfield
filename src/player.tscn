@@ -35,5 +35,4 @@ position = Vector2(369.5, 266.5)
 sprite_frames = SubResource("SpriteFrames_ruwtv")
 animation = &"standing"
 autoplay = "standing"
-frame = 1
-frame_progress = 0.602191
+frame_progress = 0.455939
