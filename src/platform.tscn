@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://db3ecxs60brtq" path="res://icon.svg" id="2_obqe2"]
 [ext_resource type="PackedScene" uid="uid://bg772mi0o32q7" path="res://src/player.tscn" id="4_datml"]
-[ext_resource type="Texture2D" uid="uid://0mgit00na26t" path="res://assets/background.png" id="5_wwsgx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sr4t0"]
 texture = ExtResource("2_obqe2")
