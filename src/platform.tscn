@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0276xjdobndd"]
+[gd_scene load_steps=6 format=3 uid="uid://c0276xjdobndd"]
 
+[ext_resource type="Texture2D" uid="uid://0mgit00na26t" path="res://assets/background.png" id="1_p7mb4"]
 [ext_resource type="Texture2D" uid="uid://hr2k5cd51dqr" path="res://assets/Platforms/Texture/TX Tileset Ground.png" id="1_xqx50"]
 [ext_resource type="PackedScene" uid="uid://ckhy7603jmxen" path="res://src/Actors/character.tscn" id="2_q1rqm"]
 
@@ -2004,6 +2005,14 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lp4iv")
 
 [node name="Level" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -844.0
+offset_right = 2041.0
+offset_bottom = 720.0
+texture = ExtResource("1_p7mb4")
+expand_mode = 2
+stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_er1qu")
