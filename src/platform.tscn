@@ -2011,7 +2011,6 @@ offset_left = -844.0
 offset_right = 2041.0
 offset_bottom = 720.0
 texture = ExtResource("1_p7mb4")
-expand_mode = 2
 stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="."]
