@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0276xjdobndd"]
+[gd_scene load_steps=5 format=3 uid="uid://c0276xjdobndd"]
 
 [ext_resource type="Texture2D" uid="uid://hr2k5cd51dqr" path="res://assets/Platforms/Texture/TX Tileset Ground.png" id="1_xqx50"]
 [ext_resource type="PackedScene" uid="uid://ckhy7603jmxen" path="res://src/Actors/character.tscn" id="2_q1rqm"]
-[ext_resource type="Script" path="res://src/Actors/character.gd" id="3_mci5h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lp4iv"]
 texture = ExtResource("1_xqx50")
@@ -2014,7 +2013,6 @@ layer_0/tile_data = PackedInt32Array(2359296, 524288, 0, 2424832, 524288, 1, 249
 
 [node name="Character" parent="." instance=ExtResource("2_q1rqm")]
 position = Vector2(475, 510)
-script = ExtResource("3_mci5h")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Character"]
 remote_path = NodePath("../../Camera2D")

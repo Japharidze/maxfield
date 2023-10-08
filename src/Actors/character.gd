@@ -8,19 +8,19 @@ const JUMP_VELOCITY = -400.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var animation_locked : bool = false
+var falling : bool = false
 var direction : Vector2 = Vector2.ZERO
-var jumping = false
-var falling = false
 
 
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-		if not animation_locked:
-			print('a0-asdasd')
+		if velocity.y > 0 and not falling:
 			animated_sprite.play("falling")
+			falling = true
+	if is_on_floor() and falling:
+		falling = false
 
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -39,7 +39,7 @@ func _physics_process(delta):
 	update_facing()
 
 func update_animation():
-	if not animation_locked:
+	if is_on_floor():
 		if direction.x != 0:
 			animated_sprite.play("moving")
 		else:
@@ -56,7 +56,6 @@ func update_facing():
 func jump():
 	velocity.y = JUMP_VELOCITY
 	animated_sprite.play("jumping")
-	animation_locked = true
 
 
 func _on_animated_sprite_2d_animation_finished():
