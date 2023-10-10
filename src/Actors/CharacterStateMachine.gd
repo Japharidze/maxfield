@@ -11,6 +11,17 @@ var states : Array[State]
 func _ready():
 	for child in get_children():
 		if child is State:
+			child.character = character
 			states.append(child)
 		else:
 			push_warning("Not state" + child.name)
+	print(states)
+
+func _physics_process(_delta):
+	if current_state.next_state:
+		var new_state = current_state.next_state
+		current_state = new_state
+		# current_state.next_state = null
+
+func _input(event):
+	current_state.state_input(event)

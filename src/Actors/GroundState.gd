@@ -1,11 +1,11 @@
 extends State
 
+class_name GroundState
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
+@export var jump_velocity = -400.0
+@export var air_state : State
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func state_input(event: InputEvent):
+	if event.is_action_pressed("ui_accept"):
+		character.velocity.y = jump_velocity
+		next_state = air_state
