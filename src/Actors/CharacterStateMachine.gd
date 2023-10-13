@@ -3,6 +3,7 @@ extends Node
 class_name CharacterStateMachine
 
 @export var character : CharacterBody2D
+@export var sprite : Sprite2D
 @export var animation_tree : AnimationTree
 @export var current_state : State
 
@@ -10,9 +11,11 @@ var states : Array[State]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	animation_tree.active = true
 	for child in get_children():
 		if child is State:
 			child.character = character
+			child.sprite = sprite
 			child.playback = animation_tree["parameters/playback"]
 			states.append(child)
 		else:
@@ -25,6 +28,7 @@ func _physics_process(delta):
 		current_state.next_state = null
 		current_state.on_enter()
 	current_state.state_process(delta)
+	character.move_and_slide()
 	
 func _input(event):
 	current_state.state_input(event)

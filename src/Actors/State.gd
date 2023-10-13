@@ -5,6 +5,7 @@ class_name State
 @export var can_move : bool = true
 
 var character : CharacterBody2D
+var sprite : Sprite2D
 var playback : AnimationNodeStateMachinePlayback
 var next_state : State
 
