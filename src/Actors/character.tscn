@@ -125,7 +125,7 @@ tracks/3/keys = {
 [sub_resource type="Animation" id="Animation_o02jp"]
 resource_name = "jumping"
 length = 0.5
-loop_mode = 1
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -284,9 +284,9 @@ graph_offset = Vector2(44, -135)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_l12mr")
+texture = ExtResource("3_lpyu8")
 hframes = 4
-vframes = 4
+vframes = 5
 frame = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -319,6 +319,7 @@ script = ExtResource("8_347ul")
 ground_state = NodePath("../Ground")
 
 [node name="Label" type="Label" parent="." node_paths=PackedStringArray("state_machine", "anim_player", "anim_tree")]
+visible = false
 offset_left = -57.0
 offset_top = -73.0
 offset_right = 53.0

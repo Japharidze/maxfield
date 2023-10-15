@@ -22,6 +22,8 @@ func _ready():
 			push_warning("Not state" + child.name)
 
 func _physics_process(delta):
+	if character.get_position()[1] > 1000:
+		get_tree().reload_current_scene()
 	if current_state.next_state:
 		var new_state = current_state.next_state
 		current_state = new_state
