@@ -2014,6 +2014,7 @@ texture = ExtResource("1_p7mb4")
 stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-2, 0)
 tile_set = SubResource("TileSet_er1qu")
 format = 2
 layer_0/name = "Ground"

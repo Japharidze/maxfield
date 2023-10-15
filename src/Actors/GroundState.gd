@@ -26,6 +26,10 @@ func state_process(_delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	character.velocity = velocity
 	
+	if !character.is_on_floor():
+		playback.travel("falling")
+		next_state = air_state
+	
 	get_parent().animation_tree.set("parameters/Move/blend_position", direction.x)
 	update_facing()
 

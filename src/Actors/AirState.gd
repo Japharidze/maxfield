@@ -15,4 +15,5 @@ func state_process(delta):
 		playback.travel("falling")
 	if character.is_on_floor():
 		falling = false
+		playback.travel("Move")
 		next_state = ground_state

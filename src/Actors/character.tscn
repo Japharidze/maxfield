@@ -19,6 +19,7 @@ length = 0.001
 [sub_resource type="Animation" id="Animation_s4fju"]
 resource_name = "falling"
 length = 0.4
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -268,8 +269,6 @@ advance_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_emvsy"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_p0ca5"]
-switch_mode = 2
-advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_sgy8b"]
 states/Move/node = SubResource("AnimationNodeBlendSpace1D_fsffj")
